@@ -6,10 +6,15 @@
 #include <myLibs/myDataTypes.h>
 #include <myLibs/myLibs.h>
 #include <myLibs/myNms.h>
+<<<<<<< HEAD
 #include <myLibs/myModelComponents.h>
 #include <myLibs/myClipboxes.h>
 
 #include "myDetect.h"
+=======
+#include <myLibs/myClipboxes.h>
+
+>>>>>>> refs/remotes/origin/master
 #include "myFeatPyramid.h"
 
 using namespace my;
@@ -19,6 +24,7 @@ _Vector< _box<T> > *faceDetector(_Array<uint8> *image, _model<T> *model){
 
 	if( !image || !model ) return NULL;
 
+<<<<<<< HEAD
 	_featurePyramid<T> *pyra = featurePyramid(image, model);
 	if( !pyra ) throw ERROR_FPYRAMID_CODE;
 
@@ -26,6 +32,9 @@ _Vector< _box<T> > *faceDetector(_Array<uint8> *image, _model<T> *model){
 	if( !model ) throw ERROR_MODEL_COMP_CODE;
 
 	_Vector< _box<T> > *boxes = detect(model, pyra);
+=======
+	_Vector< _box<T> > *boxes = featurePyramid(image, model);
+>>>>>>> refs/remotes/origin/master
 	if( !boxes ) throw ERROR_DETECT_CODE;
 
 	boxes = clipboxes(boxes, image);
@@ -34,7 +43,10 @@ _Vector< _box<T> > *faceDetector(_Array<uint8> *image, _model<T> *model){
 	boxes = nms(boxes, (T) model->Nms_Overlap, model->Nms_Limit);
 	if( !boxes ) throw ERROR_NMS_CODE;
 
+<<<<<<< HEAD
 	freeFeaturePyramid(pyra, true);
+=======
+>>>>>>> refs/remotes/origin/master
 	return boxes;
 }
 
