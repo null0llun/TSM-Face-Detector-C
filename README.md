@@ -7,9 +7,9 @@ The alternative patches are not included in any of the versions.
 ### Settings.xml Info
 Change the settings xml file contents according to your needs.
 Change the <outputType> xml object value to
--xx1 (binary) for export the results in XML file (decimal ex. 1,3,5,7)
--x1x (binary) for export the results in image file (decimal ex 2,3,6,7)
--1xx (binary) for export the results in visualy in the screen (decimal ex 4,5,6,7)
+- xx1 (binary) for export the results in XML file (decimal ex. 1,3,5,7)
+- x1x (binary) for export the results in image file (decimal ex 2,3,6,7)
+- 1xx (binary) for export the results in visualy in the screen (decimal ex 4,5,6,7)
 
 ### Build and Run
 Export the containing files and folder in a directory of your choise.
