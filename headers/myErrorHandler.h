@@ -22,20 +22,4 @@
 #define ERROR_OUTPUT_CODE			19
 #define ERROR_XML_CODE				20
 
-
-/* #include <stdio.h>
-
-using namespace std;
-
-namespace my{
-	
-char *errorMessage(char *message, int code){
-	
-	char *em = (char*) malloc(150);
-	sprintf(em, "Error %d : %s\n", code, message);
-	return em;
-}
-
-} // end of namespace */
-
 #endif
