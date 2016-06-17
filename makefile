@@ -15,4 +15,4 @@ myFaceDetectorFull.o: myFaceDetectorFull.cpp
 myFaceDetectorFull.cpp: sources/*.h
 
 clean: 
-	rm *.o myFaceDetector
+	rm *.o *.d myFaceDetector
