@@ -48,9 +48,6 @@ _Array<T> *resize(_Array<T> *image, F scale){
 	int k=0;
 	alphainfo<F> *ofs = (alphainfo<F>*) malloc(len * sizeof(alphainfo<F>));
 
-	#ifdef OMP_ENABLE
-	#pragma omp parallel for
-	#endif
 	for( int dy=0; dy<im->dims[1]; dy++ ){
 
 		F fsy1 = dy * invscale;
@@ -86,6 +83,9 @@ _Array<T> *resize(_Array<T> *image, F scale){
 		}
 	}
 
+	#ifdef OMP_ENABLE
+	#pragma omp parallel for
+	#endif
 	for ( int c=0; c<image->dims[2]; c++ ) {
 		for ( int x=0; x<image->dims[1]; x++ ) {
 
@@ -104,9 +104,6 @@ _Array<T> *resize(_Array<T> *image, F scale){
 	ofs = (alphainfo<F>*) malloc(len * sizeof(alphainfo<F>));
 	k = 0;
 
-	#ifdef OMP_ENABLE
-	#pragma omp parallel for
-	#endif
 	for( int dy=0; dy<image->dims[1]; dy++ ){
 
 		F fsy1 = dy * invscale;
@@ -142,6 +139,9 @@ _Array<T> *resize(_Array<T> *image, F scale){
 		}
 	}
 
+	#ifdef OMP_ENABLE
+	#pragma omp parallel for
+	#endif
 	for ( int c=0; c<im->dims[2]; c++ ) {
 		for ( int x=0; x<im->dims[1]; x++ ) {
 
