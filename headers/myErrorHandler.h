@@ -22,4 +22,6 @@
 #define ERROR_OUTPUT_CODE			19
 #define ERROR_XML_CODE				20
 
+} // end of namespace */
+
 #endif

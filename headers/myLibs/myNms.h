@@ -12,6 +12,7 @@ _Vector< _box<T> > * nms(_Vector< _box<T> > *boxes, T overlap, int nms_limit){
 
 	if( !boxes ) return NULL;
 	if( boxes->length == 0 ) return boxes;
+	if( nms_limit == 0 ) nms_limit = boxes->length;
 
 	int boxcache = boxes->length;
 	int N = boxes->length;
