@@ -1,7 +1,7 @@
 # TSM-Face-Detector
 
 # Implementation Info
-The TSM algorithm is implemented using the default patches described in the main documentation file (folder /documentation).
+All the versions of the TSM algorithm (except v1.3) are implemented using the default patches described in the main documentation file (folder /documentation).
 The alternative patches are not included in any of the versions.
 
 # Settings.xml Info
@@ -10,10 +10,6 @@ Change the <outputType> xml object value to
 -xx1 (binary) for export the results in XML file (decimal ex. 1,3,5,7)
 -x1x (binary) for export the results in image file (decimal ex 2,3,6,7)
 -1xx (binary) for export the results in visually in the screen (decimal ex 4,5,6,7)
-
-Change the <version> xml object value to
--2 for using the version 2.2 of the TSM system
--Any other value uses the version 3.2 of the TSM system
 
 # Build and Run
 Export the containing files and folder in a directory of your choice.
