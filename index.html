@@ -16,14 +16,14 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/null0llun/TSM-Face-Detector">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/null0llun/TSM-Face-Detector-C">View on GitHub</a>
 
           <h1 id="project_title">TSM Face Detection System</h1>
           <h2 id="project_tagline"></h2>
 
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/null0llun/TSM-Face-Detector/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/null0llun/TSM-Face-Detector/tarball/master">Download this project as a tar.gz file</a>
+              <a class="zip_download_link" href="https://github.com/null0llun/TSM-Face-Detector-C/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/null0llun/TSM-Face-Detector-C/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
     </div>
@@ -34,12 +34,16 @@
         <h3>
 <a id="implementation" class="anchor" href="#implementation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implementation</h3>
 
-<p>This is the implementation of the <a href="http://www.ics.uci.edu/%7Exzhu/face/">“Face Detection, Pose Estimation, and Landmark Localization in the Wild”</a> algorithm by Xiangxin Zhu and Deva Ramanan. This implementation was firstly designed for being used by embedded systems but finally it can also be used by large multiprocessors systems. Our implementation is in basic C\C++ and there is no usage of any external library in the core of the algorithm. This gives the algorithm the ability to be used in both Windows and UNIX systems with no further changes. It also allows further improvements and alteration as it is easily readable for those who would like to use it for custom application.</p>
+<p>The TSM (Tree Structural Model) face detection system is the implementation of the <a href="http://www.ics.uci.edu/%7Exzhu/face/">“Face Detection, Pose Estimation, and Landmark Localization in the Wild”</a> algorithm by Xiangxin Zhu and Deva Ramanan. This implementation was firstly designed for being used by embedded systems but finally it can also be used by large multiprocessors systems. The Face Detection System is implemented in basic C and there is no usage of any external library (ex. openCV, Boost) in the core of the algorithm. This gives the algorithm the ability to be used in both Windows and UNIX systems with no further changes. It also allows further improvements and alteration as it is easily readable for those who would like to use it for custom application. </p>
+
+<p>As this implementation was designed for usage in embedded systems the need of reducing memory consumption was encounter. Additionally the multithreading technology was also used for multicore systems. Compared to the implementation of <a href="https://people.cs.umass.edu/%7Ehsu/">Hang Su</a>, this implementation is two times faster and consumes about ten times less memory as described in the documentation</p>
 
 <h3>
 <a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h3>
 
-<p>This implementation was created as a master thesis in the Technical University of Crete by Panos Kalodimas and its documentation can be found <a href="https://github.com/null0llun/TSM-Face-Detector-C/tree/documentation/documentation">here</a>. The implementation offers two extra patches as referred in the documentation chapter 6 (Default Patches). The rest patches presented in chapter 8 (Alternative Patches) are not included. In the documentation the memory consumption and the execution time performance can also be found for embedded system usage.</p>
+<p>This implementation was created as a master thesis in the Technical University of Crete by <a href="https://gr.linkedin.com/in/pkalodimas">Panos Kalodimas</a>. The <a href="https://github.com/null0llun/TSM-Face-Detector-C/tree/documentation/documentation">Full documentation</a> is available in the repository. The implementation offers two extra patches as referred in the documentation chapter 6 (Default Patches). The rest patches presented in chapter 8 (Alternative Patches) are not included. In the documentation the memory consumption and the execution time performance can also be found for embedded system usage.</p>
+
+<p>Our implementation gives the ability of customizing the functionality of the algorithm through a set of settings and parameters that can easily be modified in the settings.xml file. The <a href="https://github.com/null0llun/TSM-Face-Detector-C/tree/documentation/documentation">TSM System Manual</a> describes the basic settings and how to build and run the TSM system.</p>
 
 <h3>
 <a id="versions" class="anchor" href="#versions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Versions</h3>
